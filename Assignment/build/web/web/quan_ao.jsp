@@ -1,6 +1,6 @@
 <%-- 
-    Document   : quan
-    Created on : Mar 16, 2022, 11:37:21 PM
+    Document   : product_detail
+    Created on : Mar 18, 2022, 3:07:14 AM
     Author     : HUNGLM
 --%>
 
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quan.css">
+    <link rel="stylesheet" href="style.css">
 
 	<title>Shop Quần Áo</title>
               
@@ -43,7 +43,7 @@
         
     <!----- Các Sản Phẩm -->
     <div class="small-product">
-        <h2 class="title">Quần Nam</h2>
+        <h2 class="title"> Quần Nam</h2>
         <div class="row">
             <div class="col-4">
                 <img src="images/quan/IMG_4419quan-au-9-phan-co-dai.png" alt="">

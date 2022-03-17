@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ao
-    Created on : Mar 16, 2022, 11:38:33 PM
+    Document   : product_detail
+    Created on : Mar 18, 2022, 3:07:14 AM
     Author     : HUNGLM
 --%>
 
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ao.css">
+    <link rel="stylesheet" href="style.css">
 
 	<title>Shop Quần Áo</title>
               
@@ -40,101 +40,93 @@
                 <img src="images/cart.png" width="30px" height="30px">
             </div>
         </div>
+          <!----- Details Các Sản Phẩm -->
+          <div class="smail-container">
+              <div class="row">
+                <div class="col-2">
+                    <img src="images/quan/IMG_4419quan-au-9-phan-co-dai.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <p>Home/Quần Nam</p>
+                    <h1>Quần âu 9 phân cổ dài</h1>
+                    <h4>300.000 VNĐ</h4>
+                    <select>
+                        <option>Chọn Size</option>
+                        <option>XXL</option>
+                        <option>XL</option>
+                        <option>L</option>
+                        <option>M</option>
+                        <option>S</option>
+                        <input type="number" value="1">
+                        <a href="" class="btn"> Add To Cart</a>
+                        <h3>Free Ship</h3>
+                        <p>
+                            Hàng về tận nơi từ 12 – 20 ngày.<br>
+                             Hàng được order từ Trung Quốc về nên được đóng gói rất cẩn thận. 
+                        </p>
+                    </select>
+                </div>
+            </div>
+          </div>
+          <!-- -----  title----- -->
+          <div class="smail-container">
+             <div class="row row-2">
+                 <h2>Sản Phẩm Tương Tự</h2>
+                 <p>Xem Thêm</p>
+
+             </div>
+        </div>
         
     <!----- Các Sản Phẩm -->
     <div class="small-product">
-        <h2 class="title">Áo Nam</h2>
+        <h2 class="title">Quần Nam</h2>
         <div class="row">
             <div class="col-4">
-                <img src="images/ao/Ao-blazer-ke-o-xu-huong-han-quoc.png" alt="">
+                <img src="images/quan/IMG_4419quan-au-9-phan-co-dai.png" alt="">
                 <h4>Áo bóng rổ sinh viên </h4>
                 <p>$250,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/ao/Ao-bong-ro-gia-2-lop-sinh-vien-dep.png" alt="">
+                <img src="images/quan/IMG_4512quan-cargo-rong-ban-han.jpg" alt="">
                 <h4>Áo Tshirt nam cá tính đa năng  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/ao/Ao-dai-tay-100-cotton-style-hanIMG_9722.jpg" alt="">
+                <img src="images/quan/IMG_4530Quan-cargo-style-bao-ho-hot.jpg" alt="">
                 <h4>Áo phông nam form rộng Style  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/ao/Ao-dai-tay-cao-co-nam-cao-capIMG_9805.jpg" alt="">
+                <img src="images/quan/IMG_4547Quan-cargo-nhieu-tui-co-day-rut.jpg" alt="">
                 <h4>Áo blazer kẻ ô xu hướng Hàn Quốc</h4>
                 <p>$500,000 VNĐ</p>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <img src="images/ao/Ao-dai-tay-form-rong-rachIMG_9673.jpg" alt="">
+                <img src="images/quan/IMG_4557Quan-cargo-nhieu-tui-ban-vua-chan.jpg" alt="">
                 <h4>Áo bóng rổ sinh viên </h4>
                 <p>$250,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/ao/Ao-len-cao-co-nam-rong-style-han-quocIMG_9780.jpg" alt="">
+                <img src="images/quan/IMG_4572quan-cargo-co-day-cai-ban-rong.jpg" alt="">
                 <h4>Áo Tshirt nam cá tính đa năng  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/ao/Ao-len-cao-co-nam-thu-dong-style-hanIMG_9831.jpg" alt="">
+                <img src="images/quan/IMG_4581Quan-cargo-ban-rong-kieu-nhat.jpg" alt="">
                 <h4>Áo phông nam form rộng Style  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/ao/Ao-phong-nam-form-rong-style-nhat-phan-quang.png" alt="">
+                <img src="images/quan/IMG_4728Quan-jean-xanh-nhat-xu-huong-hoc-sinh-gian-di-han.jpg" alt="">
                 <h4>Áo blazer kẻ ô xu hướng Hàn Quốc</h4>
                 <p>$500,000 VNĐ</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <img src="images/ao/Ao-tshirt-nam-gia-2-lop-ca-tinh-da-nang-style-hongkong.png" alt="">
-                <h4>Áo bóng rổ sinh viên </h4>
-                <p>$250,000 VNĐ</p>
-            </div>
-           
-            <div class="col-4">
-                <img src="images/ao/IMG_3658-1.jpg" alt="">
-                <h4>Áo bóng rổ sinh viên </h4>
-                <p>$250,000 VNĐ</p>
-            </div>
-            <div class="col-4">
-                <img src="images/ao/IMG_3722Ap-phong-nam-Form-rong-in-loa.jpg" alt="">
-                <h4>Áo Tshirt nam cá tính đa năng  </h4>
-                <p>$300,000 VNĐ</p>
-            </div>
-            <div class="col-4">
-                <img src="images/ao/IMG_4069Ao-so-mi-ngan-tay-gia-2-lop-style-nhat.jpg" alt="">
-                <h4>Áo phông nam form rộng Style  </h4>
-                <p>$300,000 VNĐ</p>
-            </div>
-            
-           </div>
+
     
-        <div class="row">
-            <div class="col-4">
-                <img src="images/ao/IMG_3928Ao-Polo-len-dai-tay-Form-rong-Han-Quoc.jpg" alt="">
-                <h4>Áo bóng rổ sinh viên </h4>
-                <p>$250,000 VNĐ</p>
-            </div>
-            <div class="col-4">
-                <img src="images/ao/IMG_4327Ao-hoodie-co-khuy-cai-style-Hongkong.jpg" alt="">
-                <h4>Áo Tshirt nam cá tính đa năng  </h4>
-                <p>$300,000 VNĐ</p>
-            </div>
-            <div class="col-4">
-                <img src="images/ao/IMG_4342Ao-hoodie-keo-khoa-Style-hongkong.jpg" alt="">
-                <h4>Áo phông nam form rộng Style  </h4>
-                <p>$300,000 VNĐ</p>
-            </div>
-            <div class="col-4">
-                <img src="images/ao/IMG_7117Ao-100-cotton-ngan-tay-an-thun-nam-2021.jpg" alt="">
-                <h4>Áo blazer kẻ ô xu hướng Hàn Quốc</h4>
-                <p>$500,000 VNĐ</p>
-            </div>
-        </div>
+     
         <div class="page-btn">
             <span>1</span>
             <span>2</span>
