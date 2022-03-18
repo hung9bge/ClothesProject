@@ -24,18 +24,28 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="images/logo.png" width="150">
+                <a href="index.html"> <img src="images/logo.png" width="150"></a>                 
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Product</a></li>                      
-                        <li><a href="">Account</a></li>
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="product-detail.html">Sản Phẩm</a></li>                                    
+                        <li><a href="quan.html">Quần Nam </a></li>
+                        <li><a href="quan.html">Áo Nam</a></li>
+                        <li><a href="account.html">Tài Khoản</a></li>
+                        <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
                     </ul>
-                    
+                    <div class="box">
+                        <div class="container-4">
+                          <input type="text" id="search" placeholder="Search..." name="search" />
+                       
+                        </div>
+                      </div>
                 </nav>
-                <img src="images/cart.png" width="30px" height="30px">
+                
+                
             </div>
+            
         </div>
         <div class="row">
             <div class="col-2">

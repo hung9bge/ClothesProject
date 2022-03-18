@@ -22,22 +22,24 @@
         <div class="header">
 
        
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="images/logo.png" width="150">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Product</a></li>                      
-                        <li><a href="">Account</a></li>
-                        <li><a href="">Quần Nam </a></li>
-                        <li><a href="">Áo Nam</a></li>
-                    </ul>
-                    
-                </nav>
-                <img src="images/cart.png" width="30px" height="30px">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                    <a href="index.html"> <img src="images/logo.png" width="150"></a>                 
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="product-detail.html">Sản Phẩm</a></li>                      
+                            <li><a href="quan.html">Quần Nam </a></li>
+                            <li><a href="quan.html">Áo Nam</a></li>
+                            <li><a href="account.html">Tài Khoản</a></li>
+
+                            
+                        </ul>
+                        
+                    </nav>
+                    <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
             </div>
         </div>
           <!----- Details Các Sản Phẩm -->
