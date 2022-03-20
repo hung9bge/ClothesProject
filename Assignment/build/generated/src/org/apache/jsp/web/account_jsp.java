@@ -50,7 +50,7 @@ public final class account_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <meta charset=\"UTF-8\">\n");
       out.write("    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n");
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"style.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"web/style.css\">\n");
       out.write("\n");
       out.write("\n");
       out.write("\t<title>Shop Quần Áo</title>\n");
@@ -58,13 +58,14 @@ public final class account_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</head>\n");
       out.write("\t\n");
       out.write("\t<body>\n");
+      out.write("           \n");
       out.write("        <div class=\"header\">\n");
       out.write("\n");
       out.write("       \n");
       out.write("            <div class=\"container\">\n");
       out.write("                <div class=\"navbar\">\n");
       out.write("                    <div class=\"logo\">\n");
-      out.write("                    <a href=\"index.html\"> <img src=\"images/logo.png\" width=\"150\"></a>                 \n");
+      out.write("                    <a href=\"index.html\"> <img src=\"web/images/logo.png\" width=\"150\"></a>                 \n");
       out.write("                    </div>\n");
       out.write("                    <nav>\n");
       out.write("                        <ul>\n");
@@ -79,7 +80,7 @@ public final class account_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                       \n");
       out.write("                    </nav>\n");
       out.write("                  \n");
-      out.write("                    <a href=\"cart.html\"> <img src=\"images/cart.png\" width=\"30px\" height=\"30px\"></a>\n");
+      out.write("                    <a href=\"cart.html\"> <img src=\"web/images/cart.png\" width=\"30px\" height=\"30px\"></a>\n");
       out.write("                    \n");
       out.write("            </div>\n");
       out.write("            \n");
@@ -89,7 +90,7 @@ public final class account_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"container\">\n");
       out.write("                <div class=\"row\">\n");
       out.write("                    <div class=\"col-2\">\n");
-      out.write("                        <img src=\"images/image1.png\" width=\"100%\">\n");
+      out.write("                        <img src=\"web/images/image1.png\" width=\"100%\">\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"col-2\">\n");
       out.write("                       <div class=\"form-container\">\n");
@@ -98,8 +99,8 @@ public final class account_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <span onclick=\"register()\" >Đăng Ký</span>\n");
       out.write("                            <hr id=\"Indicator\"> \n");
       out.write("                            </div>\n");
-      out.write("                            <form action=\"\" id=\"LoginForm\">\n");
-      out.write("                           <input type=\"text\" placeholder=\"Tên Đăng Nhập\" name=\"username\"><br>\n");
+      out.write("                           <form action=\"login\" id=\"LoginForm\" method=\"POST\">\n");
+      out.write("                           <input type=\"text\" placeholder=\"Tên Đăng Nhập\" name=\"name\"><br>\n");
       out.write("                            <input type=\"password\" placeholder=\" Mật khẩu \" name=\"password\">\n");
       out.write("                            <button type=\"submit\" class=\"btn\" name=\"\" > Đăng Nhâp</button>              \n");
       out.write("                            </form>\n");

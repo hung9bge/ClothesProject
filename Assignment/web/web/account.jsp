@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="web/style.css">
 
 
 	<title>Shop Quần Áo</title>
@@ -26,22 +26,22 @@
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-                    <a href="index.html"> <img src="images/logo.png" width="150"></a>                 
+                    <a href="product"> <img src="web/images/logo.png" width="150"></a>                 
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="index.html">Trang Chủ</a></li>
-                            <li><a href="product-detail.html">Sản Phẩm</a></li>                      
-                            <li><a href="quan.html">Quần Nam </a></li>
-                            <li><a href="quan.html">Áo Nam</a></li>
-                            <li><a href="account.html">Tài Khoản</a></li>
+                            <li><a href="product">Trang Chủ</a></li>
+                               <c:forEach items="${categoriesList}" var="o">
+                                <li><a href="product?action=getProductByCate&id=${o.id}">${o.name}</a></li>   
+                            </c:forEach>
+                            <li><a href="login">Tài Khoản</a></li>
 
                             
                         </ul>
                        
                     </nav>
                   
-                    <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
+                    <a href="cart.html"> <img src="web/images/cart.png" width="30px" height="30px"></a>
                     
             </div>
             
@@ -51,7 +51,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-2">
-                        <img src="images/image1.png" width="100%">
+                        <img src="web/images/image1.png" width="100%">
                     </div>
                     <div class="col-2">
                        <div class="form-container">

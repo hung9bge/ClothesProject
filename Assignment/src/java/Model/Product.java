@@ -9,21 +9,30 @@ package Model;
  *
  * @author HUNGLM
  */
-public class Product {
+public class Product extends Category{
     private int id;
     private String name;
+    private Double price;
     private String img;
-    private int price;
 
     public Product() {
     }
 
-    public Product(int id, String name, String img, int price) {
+    public Product(int id, String name, Double price, String img) {
         this.id = id;
         this.name = name;
-        this.img = img;
         this.price = price;
+        this.img = img;
     }
+
+    public Product(int id, String name, Double price, String img, String category_id, int cate_id, String cate_name) {
+        super(cate_id, cate_name);
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.img = img;
+    }
+    
 
     public int getId() {
         return id;
@@ -49,14 +58,18 @@ public class Product {
         this.img = img;
     }
 
-    public int getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Product{" + "id=" + id + ", name=" + name + ", price=" + price + ", img=" + img  +'}';
+    }
+
     
 }

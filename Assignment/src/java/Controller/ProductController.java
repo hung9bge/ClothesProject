@@ -5,9 +5,11 @@
  */
 package Controller;
 
+import Dal.CategoryDBContext;
 import Dal.ProductDBContext;
 import Model.Account;
 import Model.Product;
+import Model.Category;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -22,25 +24,12 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ProductController extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    ProductDBContext productDBContext = new ProductDBContext();
+    CategoryDBContext categoryDBContext = new CategoryDBContext();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         Account account = (Account)request.getSession().getAttribute("account");
-        ProductDBContext db = new ProductDBContext();
-        ArrayList<Product> product = db.getProduct(account.getName(), account.getPassword());
-        request.setAttribute("product", product);
-        request.getRequestDispatcher("web/quan_ao.jsp").forward(request, response);
-
     }
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -54,17 +43,41 @@ public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        ArrayList<Category> categoriesList = categoryDBContext.getAllCategories();
+        request.setAttribute("categoriesList", categoriesList);
+        String action = request.getParameter("action");
+        if (action == null || action.length() == 0) {
+            request.getRequestDispatcher("web/home.jsp").forward(request, response);
+        }
+        switch (action) {
+            case "getProductByCate":
+                getProductByCate(request, response);
+                break;
+            case "getProductById":
+                getProductById(request, response);
+                break;
+
+        }
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    private void getProductByCate(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        int cate_id = Integer.parseInt(request.getParameter("id"));
+        ArrayList<Product> productsList = productDBContext.getProductsByCateId(cate_id);
+        Category category = categoryDBContext.getCategoryById(cate_id);
+        request.setAttribute("category", category);
+        request.setAttribute("productsList", productsList);
+        request.getRequestDispatcher("web/quan_ao.jsp").forward(request, response);
+    }
+
+    private void getProductById(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        int product_id = Integer.parseInt(request.getParameter("id"));
+        Product productDetail = productDBContext.getProductById(product_id);
+        request.setAttribute("productDetail", productDetail);
+        request.getRequestDispatcher("web/product_detail.jsp").forward(request, response);
+    }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
