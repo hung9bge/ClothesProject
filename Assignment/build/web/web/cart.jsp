@@ -52,7 +52,7 @@
             <tr>
                 <td>
                     <div class="cart-infor">
-                        <img src="images/quan/IMG_4419quan-au-9-phan-co-dai.png" alt="">
+                        <img src="images/quan/11.png" alt="">
                         <div>
                             <p>Quần âu 9 phân cổ dài</p>
                             <small>Giá Thành: 300.000 VNĐ</small><br>

@@ -19,6 +19,7 @@
 	</head>
 	
 	<body>
+           
         <div class="header">
 
        
@@ -59,8 +60,8 @@
                             <span onclick="register()" >Đăng Ký</span>
                             <hr id="Indicator"> 
                             </div>
-                            <form action="" id="LoginForm">
-                           <input type="text" placeholder="Tên Đăng Nhập" name="username"><br>
+                           <form action="login" id="LoginForm" method="POST">
+                           <input type="text" placeholder="Tên Đăng Nhập" name="name"><br>
                             <input type="password" placeholder=" Mật khẩu " name="password">
                             <button type="submit" class="btn" name="" > Đăng Nhâp</button>              
                             </form>

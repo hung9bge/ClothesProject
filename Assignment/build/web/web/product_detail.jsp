@@ -46,7 +46,7 @@
           <div class="smail-container">
               <div class="row">
                 <div class="col-2">
-                    <img src="images/quan/IMG_4419quan-au-9-phan-co-dai.png" width="100%">
+                    <img src="images/quan/11.png" width="100%">
                 </div>
                 <div class="col-2">
                     <p>Home/Quần Nam</p>
@@ -84,44 +84,44 @@
         <h2 class="title">Quần Nam</h2>
         <div class="row">
             <div class="col-4">
-                <img src="images/quan/IMG_4419quan-au-9-phan-co-dai.png" alt="">
+                <img src="images/quan/11.png" alt="">
                 <h4>Áo bóng rổ sinh viên </h4>
                 <p>$250,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/quan/IMG_4512quan-cargo-rong-ban-han.jpg" alt="">
+                <img src="images/quan/12.jpg" alt="">
                 <h4>Áo Tshirt nam cá tính đa năng  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/quan/IMG_4530Quan-cargo-style-bao-ho-hot.jpg" alt="">
+                <img src="images/quan/13.jpg" alt="">
                 <h4>Áo phông nam form rộng Style  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/quan/IMG_4547Quan-cargo-nhieu-tui-co-day-rut.jpg" alt="">
+                <img src="images/quan/14.jpg" alt="">
                 <h4>Áo blazer kẻ ô xu hướng Hàn Quốc</h4>
                 <p>$500,000 VNĐ</p>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <img src="images/quan/IMG_4557Quan-cargo-nhieu-tui-ban-vua-chan.jpg" alt="">
+                <img src="images/quan/15.jpg" alt="">
                 <h4>Áo bóng rổ sinh viên </h4>
                 <p>$250,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/quan/IMG_4572quan-cargo-co-day-cai-ban-rong.jpg" alt="">
+                <img src="images/quan/16.jpg" alt="">
                 <h4>Áo Tshirt nam cá tính đa năng  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/quan/IMG_4581Quan-cargo-ban-rong-kieu-nhat.jpg" alt="">
+                <img src="images/quan/17.jpg" alt="">
                 <h4>Áo phông nam form rộng Style  </h4>
                 <p>$300,000 VNĐ</p>
             </div>
             <div class="col-4">
-                <img src="images/quan/IMG_4728Quan-jean-xanh-nhat-xu-huong-hoc-sinh-gian-di-han.jpg" alt="">
+                <img src="images/quan/18.jpg" alt="">
                 <h4>Áo blazer kẻ ô xu hướng Hàn Quốc</h4>
                 <p>$500,000 VNĐ</p>
             </div>
