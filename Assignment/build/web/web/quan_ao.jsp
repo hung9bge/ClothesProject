@@ -39,7 +39,7 @@
                             <li><a href="login">Tài Khoản</a></li>
 
                         </ul>
-                        <a href="cart.html"> <img src="web/images/cart.png" width="30px" height="30px"></a>
+                        <a href="cart"> <img src="web/images/cart.png" width="30px" height="30px"></a>
                         </ul>
                         <div class="box">
                             <div class="container-4">
@@ -56,7 +56,7 @@
                     <div class="row">
                         <c:forEach items="${productsList}" var="o" begin="1" end="8">
                             <div class="col-4">
-                                <a href="product?action=getProductById&id=${o.id}">
+                                <a href="product?action=getProductById&id=${o.id}&cateId=${category.id}">
                             <img src="web/images/quan_ao/${o.img}" alt="">
                             <h4>${o.name}</h4>
                             <p>${o.price }</p>

@@ -41,7 +41,7 @@
                        
                     </nav>
                   
-                    <a href="cart.html"> <img src="web/images/cart.png" width="30px" height="30px"></a>
+                    <a href="cart"> <img src="web/images/cart.png" width="30px" height="30px"></a>
                     
             </div>
             

@@ -14,6 +14,7 @@ public class Product extends Category{
     private String name;
     private Double price;
     private String img;
+    private String status;
 
     public Product() {
     }
@@ -32,6 +33,15 @@ public class Product extends Category{
         this.price = price;
         this.img = img;
     }
+
+    public Product(int id, String name, Double price, String img, String status) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.img = img;
+        this.status = status;
+    }
+    
     
 
     public int getId() {
@@ -66,10 +76,19 @@ public class Product extends Category{
         this.price = price;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", name=" + name + ", price=" + price + ", img=" + img  +'}';
+        return "Product{" + "id=" + id + ", name=" + name + ", price=" + price + ", img=" + img + ", status=" + status + '}';
     }
+    
 
     
 }

@@ -80,15 +80,56 @@ public class ProductDBContext extends DBContext {
             ResultSet rs = stm.executeQuery();
             while (rs.next()) {
                 product = new Product(
-                rs.getInt("id"),
-                rs.getString("name"),
-                rs.getDouble("price"),
-                rs.getString("img"));
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getDouble("price"),
+                        rs.getString("img"),
+                        rs.getString("status"));
+
             }
         } catch (SQLException ex) {
             Logger.getLogger(ProductDBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
         return product;
+
+    }
+
+    public ArrayList<Product> getProductAll() {
+        ArrayList<Product> productList = new ArrayList<>();
+        String sql = this.query.getProductAll;
+        try {
+            PreparedStatement stm = connection.prepareStatement(sql);
+            ResultSet rs = stm.executeQuery();
+            while (rs.next()) {
+                productList.add(new Product(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getDouble("price"),
+                        rs.getString("img"),
+                        rs.getString("status")));
+
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductDBContext.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return productList;
+
+    }
+
+    public void ChangeStatus(Product product) {
+        String sql;
+        if (product.getStatus().equals("hide")) {
+            sql = this.query.showStatus;
+        } else {
+            sql = this.query.hideStatus;
+        }
+        try {
+            PreparedStatement stm = connection.prepareStatement(sql);
+            stm.setInt(1,product.getId());
+            stm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductDBContext.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 //    public static void main(String[] args) {
@@ -101,7 +142,8 @@ public class ProductDBContext extends DBContext {
 
     public static void main(String[] args) {
         ProductDBContext dao = new ProductDBContext();
-        Product pr = dao.getProductById(2);
-        System.out.println(pr);
+        Product product = dao.getProductById(2);
+        dao.ChangeStatus(product);
+
     }
 }

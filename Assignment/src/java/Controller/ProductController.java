@@ -43,6 +43,8 @@ public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         ArrayList<Category> categoriesList = categoryDBContext.getAllCategories();
         request.setAttribute("categoriesList", categoriesList);
         String action = request.getParameter("action");
@@ -62,6 +64,7 @@ public class ProductController extends HttpServlet {
 
     private void getProductByCate(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
         int cate_id = Integer.parseInt(request.getParameter("id"));
         ArrayList<Product> productsList = productDBContext.getProductsByCateId(cate_id);
         Category category = categoryDBContext.getCategoryById(cate_id);
@@ -73,14 +76,19 @@ public class ProductController extends HttpServlet {
     private void getProductById(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int product_id = Integer.parseInt(request.getParameter("id"));
+        int category_id = Integer.parseInt(request.getParameter("cateId"));
+        ArrayList<Product> productsList = productDBContext.getProductsByCateId(category_id);
         Product productDetail = productDBContext.getProductById(product_id);
         request.setAttribute("productDetail", productDetail);
+        request.setAttribute("productsList", productsList);
         request.getRequestDispatcher("web/product_detail.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         processRequest(request, response);
     }
 

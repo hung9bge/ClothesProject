@@ -3,10 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/Query.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/js/plugins/ckeditor/skins/moono/editor_iequirks.css</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/account.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Controller/Admin/SettingProductController.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/cart.jsp</file>
             <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/quan_ao.jsp</file>
-            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/CategoryDBContext.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/ProductDBContext.java</file>
             <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Controller/ProductController.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/index.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/product_detail.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/Query.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/home.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/js/plugins/ckeditor/skins/moono/editor_ie7.css</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Controller/CartController.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Model/Product.java</file>
         </group>
     </open-files>
 </project-private>

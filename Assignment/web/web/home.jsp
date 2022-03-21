@@ -35,7 +35,7 @@
                                 <li><a href="product?action=getProductByCate&id=${o.id}">${o.name}</a></li>   
                             </c:forEach>
                             <li><a href="login">Tài Khoản</a></li>
-                            <a href="cart.html"> <img src="web/images/cart.png" width="30px" height="30px"></a>
+                            <a href="cart"> <img src="web/images/cart.png" width="30px" height="30px"></a>
                         </ul>
                         <div class="box">
                             <div class="container-4">

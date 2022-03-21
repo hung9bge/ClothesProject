@@ -25,11 +25,11 @@
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-                    <a href="index.html"> <img src="web/images/logo.png" width="150"></a>                 
+                    <a href="product"> <img src="web/images/logo.png" width="150"></a>                 
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="product">Trang Chủ</a></li>
                                           
                          <c:forEach items="${categoriesList}" var="o">
                                 <li><a href="product?action=getProductByCate&id=${o.id}">${o.name}</a></li>   
@@ -38,7 +38,7 @@
                         </ul>
                         
                     </nav>
-                    <a href="cart.html"> <img src="images/cart.png" width="30px" height="30px"></a>
+                    <a href="cart"> <img src="web/images/cart.png" width="30px" height="30px"></a>
             </div>
         </div>
          <!-- cart items details  -->

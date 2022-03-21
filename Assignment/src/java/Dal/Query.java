@@ -11,13 +11,16 @@ package Dal;
  */
 public class Query {
     //==============Product===================
-    String getProductsByCateId = "select * from product where category_id = ?";
-    
-    
+    String getProductsByCateId = "select * from product where category_id = ? and status = 'show'";
+    String getProductById = "select * from product where id = ? ";
+    String getProductAll = "select * from product";
+    String hideStatus = "UPDATE [product] SET [status] = 'hide' WHERE id = ?";
+    String showStatus = "UPDATE [product] SET [status] = 'show' WHERE id = ?";
     //==============Category==================
     String getAllCategories = "select * from category";
     String getCategoryById = "  select * from category where id = ?";
     
-    //==============ProductDetail==================
-    String getProductById = "select * from product where id = ? ";
+    
+  
+   
 }

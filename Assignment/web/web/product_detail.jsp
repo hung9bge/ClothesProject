@@ -40,7 +40,7 @@
                         </ul>
                         
                     </nav>
-                    <a href="cart.html"> <img src="web/images/cart.png" width="30px" height="30px"></a>
+                    <a href="cart"> <img src="web/images/cart.png" width="30px" height="30px"></a>
             </div>
         </div>
           <!----- Details Các Sản Phẩm -->
@@ -75,8 +75,18 @@
           <div class="smail-container">
              <div class="row row-2">
                  <h2>Sản Phẩm Tương Tự</h2>
-                 <p>Xem Thêm</p>
-
+                    <div class="row">
+                        <c:forEach items="${productsList}" var="o" begin="1" end="4">
+                            <div class="col-4">
+                                <a href="product?action=getProductById&id=${o.id}">
+                            <img src="web/images/quan_ao/${o.img}" alt="">
+                            <h4>${o.name}</h4>
+                            <p>${o.price }</p>
+                                </a>
+                        </div>
+                        </c:forEach>
+                        
+                    </div>
              </div>
         </div>
         
