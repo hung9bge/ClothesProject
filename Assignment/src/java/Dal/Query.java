@@ -16,6 +16,7 @@ public class Query {
     String getProductAll = "select * from product";
     String hideStatus = "UPDATE [product] SET [status] = 'hide' WHERE id = ?";
     String showStatus = "UPDATE [product] SET [status] = 'show' WHERE id = ?";
+    String edit = "UPDATE [product] SET [name] = ?,[price] = ?,[img] = ?,[category_id] = ? WHERE [id] = ?";
     //==============Category==================
     String getAllCategories = "select * from category";
     String getCategoryById = "  select * from category where id = ?";

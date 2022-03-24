@@ -125,25 +125,56 @@ public class ProductDBContext extends DBContext {
         }
         try {
             PreparedStatement stm = connection.prepareStatement(sql);
-            stm.setInt(1,product.getId());
+            stm.setInt(1, product.getId());
             stm.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(ProductDBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
-//    public static void main(String[] args) {
-//        ProductDBContext dao = new ProductDBContext();
-//        ArrayList<Product> list = dao.getProductsByCateId(1);
-//        for (Product product : list) {
-//            System.out.println(product);
-//        }
-//    }
+
+    public void editProduct(Product product) {
+        String sql;
+        sql = this.query.edit;
+        PreparedStatement stm = null;
+        try {
+            stm = connection.prepareStatement(sql);
+            stm.setString(1, product.getName());
+            stm.setDouble(2, product.getPrice());
+            stm.setString(3, product.getImg());
+            stm.setInt(4, product.getCate_id());        
+            stm.setInt(5, product.getId());
+            stm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductDBContext.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (stm != null) {
+                try {
+                    stm.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ProductDBContext.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(ProductDBContext.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         ProductDBContext dao = new ProductDBContext();
-        Product product = dao.getProductById(2);
-        dao.ChangeStatus(product);
+        Product product = dao.getProductById(10);
+        product.setId(10);
+        product.setCate_id(2);
+        product.setImg("hungdepzai");
+        product.setName("hehe");
+        product.setPrice(Double.NaN);
+     
+        dao.editProduct(product);
 
     }
 }

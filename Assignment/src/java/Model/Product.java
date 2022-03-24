@@ -15,6 +15,7 @@ public class Product extends Category{
     private Double price;
     private String img;
     private String status;
+ 
 
     public Product() {
     }
@@ -26,7 +27,7 @@ public class Product extends Category{
         this.img = img;
     }
 
-    public Product(int id, String name, Double price, String img, String category_id, int cate_id, String cate_name) {
+    public Product(int id, String name, Double price, String img, int cate_id, String cate_name) {
         super(cate_id, cate_name);
         this.id = id;
         this.name = name;
@@ -87,6 +88,10 @@ public class Product extends Category{
     @Override
     public String toString() {
         return "Product{" + "id=" + id + ", name=" + name + ", price=" + price + ", img=" + img + ", status=" + status + '}';
+    }
+
+    public void setPrice(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 

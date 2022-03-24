@@ -9,11 +9,13 @@ import Dal.ProductDBContext;
 import Model.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.JDBCType;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.jboss.classfilewriter.annotations.IntAnnotationValue;
 
 /**
  *
@@ -40,7 +42,11 @@ public class SettingProductController extends HttpServlet {
                 case "changeStatus":
                     changeStatus(request, response);
                     break;
+                case "editGet":
+                    editGet(request, response);
+                    break;
             }
+            
         }
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -62,8 +68,20 @@ public class SettingProductController extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = productDBContext.getProductById(id);
         productDBContext.ChangeStatus(product);
+        response.sendRedirect("SettingProductController");     
+    }
+    private void editGet (HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException{
+        int id = Integer.parseInt(request.getParameter("id"));
+         Product product = productDBContext.getProductById(id);
+        String name = request.getParameter("name");
+        double price = Double.parseDouble(request.getParameter("price"));
+        String img = request.getParameter("img");
+        int cate_id = Integer.parseInt(request.getParameter("cate_id"));
+        String cate_name = request.getParameter("cate_name");      
+           
+        productDBContext.editProduct(product);
         response.sendRedirect("SettingProductController");
-            
         
     }
     @Override

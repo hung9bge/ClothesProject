@@ -10,36 +10,36 @@ package Model;
  * @author HUNGLM
  */
 public class Category {
-    private int  id;
-    private String name;
+    private int  cate_id;
+    private String cate_name;
 
     public Category() {
     }
 
-    public Category(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public Category(int cate_id, String cate_name) {
+        this.cate_id = cate_id;
+        this.cate_name = cate_name;
     }
 
-    public int getId() {
-        return id;
+    public int getCate_id() {
+        return cate_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCate_id(int cate_id) {
+        this.cate_id = cate_id;
     }
 
     public String getName() {
-        return name;
+        return cate_name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.cate_name = name;
     }
 
     @Override
     public String toString() {
-        return "Category{" + "id=" + id + ", name=" + name + '}';
+        return "Category{" + "id=" + cate_id + ", name=" + cate_name + '}';
     }
     
     

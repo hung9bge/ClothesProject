@@ -55,64 +55,8 @@
         <!-- header logo: style can be found in header.less -->
         <header class="header">
             <a href="index.html" class="logo">
-                Director
+                Admin
             </a>
-            <!-- Header Navbar: style can be found in header.less -->
-            <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
-                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="navbar-right">
-                    <ul class="nav navbar-nav">
-                        <!-- User Account: style can be found in dropdown.less -->
-                        <li class="dropdown user user-menu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-user"></i>
-                                <span>Jane Doe <i class="caret"></i></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
-                                <li class="dropdown-header text-center">Account</li>
-
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-clock-o fa-fw pull-right"></i>
-                                        <span class="badge badge-success pull-right">10</span> Updates</a>
-                                    <a href="#">
-                                        <i class="fa fa-envelope-o fa-fw pull-right"></i>
-                                        <span class="badge badge-danger pull-right">5</span> Messages</a>
-                                    <a href="#"><i class="fa fa-magnet fa-fw pull-right"></i>
-                                        <span class="badge badge-info pull-right">3</span> Subscriptions</a>
-                                    <a href="#"><i class="fa fa-question fa-fw pull-right"></i> <span class=
-                                                                                                      "badge pull-right">11</span> FAQ</a>
-                                </li>
-
-                                <li class="divider"></li>
-
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-user fa-fw pull-right"></i>
-                                        Profile
-                                    </a>
-                                    <a data-toggle="modal" href="#modal-user-settings">
-                                        <i class="fa fa-cog fa-fw pull-right"></i>
-                                        Settings
-                                    </a>
-                                </li>
-
-                                <li class="divider"></li>
-
-                                <li>
-                                    <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
@@ -143,27 +87,23 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="active">
-                            <a href="index.html">
+                            <a href="SettingProductController">
                                 <i class="fa fa-dashboard"></i> <span>Product</span>
                             </a>
                         </li>
                         <li>
                             <a href="general.html">
-                                <i class="fa fa-gavel"></i> <span>General</span>
+                                <i class="fa fa-gavel"></i> <span>Account</span>
                             </a>
                         </li>
 
                         <li>
                             <a href="basic_form.html">
-                                <i class="fa fa-globe"></i> <span>Basic Elements</span>
+                                <i class="fa fa-globe"></i> <span>Category</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="simple.html">
-                                <i class="fa fa-glass"></i> <span>Simple tables</span>
-                            </a>
-                        </li>
+                       
 
                     </ul>
                 </section>
@@ -189,6 +129,7 @@
                             <td>${o.price}</td>
                             <td>${o.img}</td>  
                             <td>${o.status}</td> 
+                            
                             <c:choose>
                                 <c:when test="${o.status=='hide'}">
                                     <td><a href="SettingProductController?action=changeStatus&id=${o.id}">show</a></td>
