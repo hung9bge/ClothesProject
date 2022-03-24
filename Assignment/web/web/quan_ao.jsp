@@ -34,7 +34,7 @@
                             <li><a href="product">Trang Chủ</a></li>
                                                
                             <c:forEach items="${categoriesList}" var="o">
-                                <li><a href="product?action=getProductByCate&id=${o.id}">${o.name}</a></li>   
+                                <li><a href="product?action=getProductByCate&id=${o.cate_id}">${o.name}</a></li>   
                             </c:forEach>
                             <li><a href="login">Tài Khoản</a></li>
 
@@ -54,9 +54,9 @@
                 <div class="small-product">
                     <h2 class="title">${category.name}</h2>
                     <div class="row">
-                        <c:forEach items="${productsList}" var="o" begin="1" end="8">
+                        <c:forEach items="${productsList}" var="o" begin="1" end="12">
                             <div class="col-4">
-                                <a href="product?action=getProductById&id=${o.id}&cateId=${category.id}">
+                                <a href="product?action=getProductById&id=${o.id}&cateId=${category.cate_id}">
                             <img src="web/images/quan_ao/${o.img}" alt="">
                             <h4>${o.name}</h4>
                             <p>${o.price }</p>

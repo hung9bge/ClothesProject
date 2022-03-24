@@ -12,13 +12,41 @@ package Model;
 public class Category {
     private int  cate_id;
     private String cate_name;
+    private String status;
 
     public Category() {
+    }
+
+    public Category(String cate_name, String status) {
+        this.cate_name = cate_name;
+        this.status = status;
     }
 
     public Category(int cate_id, String cate_name) {
         this.cate_id = cate_id;
         this.cate_name = cate_name;
+    }
+
+    public Category(int cate_id, String cate_name, String status) {
+        this.cate_id = cate_id;
+        this.cate_name = cate_name;
+        this.status = status;
+    }
+
+    public String getCate_name() {
+        return cate_name;
+    }
+
+    public void setCate_name(String cate_name) {
+        this.cate_name = cate_name;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public int getCate_id() {
@@ -39,8 +67,7 @@ public class Category {
 
     @Override
     public String toString() {
-        return "Category{" + "id=" + cate_id + ", name=" + cate_name + '}';
+        return "Category{" + "cate_id=" + cate_id + ", cate_name=" + cate_name + ", status=" + status + '}';
     }
-    
-    
+
 }

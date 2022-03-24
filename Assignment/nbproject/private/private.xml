@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/Query.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Controller/Admin/SettingAccountController.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/edit_account.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/add_account.jsp</file>
             <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Controller/Admin/SettingProductController.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Model/Account.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/add_category.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/edit_product.jsp</file>
             <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/quan_ao.jsp</file>
-            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/ProductDBContext.java</file>
-            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/edit.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/all_account.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/CategoryDBContext.java</file>
             <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/index.jsp</file>
-            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Model/Product.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Model/Category.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Dal/Query.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/category_list.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/src/java/Controller/Admin/SettingCategoryController.java</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/edit_category.jsp</file>
+            <file>file:/C:/Users/HUNGLM/Desktop/ClothesProject/Assignment/web/web/Admin/add_product.jsp</file>
         </group>
     </open-files>
 </project-private>

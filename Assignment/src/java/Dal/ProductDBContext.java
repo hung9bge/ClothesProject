@@ -119,9 +119,9 @@ public class ProductDBContext extends DBContext {
     public void ChangeStatus(Product product) {
         String sql;
         if (product.getStatus().equals("hide")) {
-            sql = this.query.showStatus;
+            sql = this.query.showProductStatus;
         } else {
-            sql = this.query.hideStatus;
+            sql = this.query.hideProductStatus;
         }
         try {
             PreparedStatement stm = connection.prepareStatement(sql);
@@ -134,7 +134,7 @@ public class ProductDBContext extends DBContext {
     }
 
     public void editProduct(Product product) {
-        String sql = this.query.edit;
+        String sql = this.query.editProduct;
       
         try {
          PreparedStatement stm = connection.prepareStatement(sql);
@@ -150,8 +150,8 @@ public class ProductDBContext extends DBContext {
     }
      
     
-    public void addGet (Product product){
-    String sql = this.query.add;
+    public void addProduct (Product product){
+    String sql = this.query.addProduct;
         try {
          PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1, product.getName());
@@ -165,7 +165,7 @@ public class ProductDBContext extends DBContext {
     
     } 
     public void delete (int id){
-        String sql = this.query.delete;
+        String sql = this.query.deleteProduct;
          try {
          PreparedStatement stm = connection.prepareStatement(sql);
         
@@ -188,7 +188,7 @@ public class ProductDBContext extends DBContext {
         product.setName("teday");
         product.setPrice(200.0);
      
-        dao.addGet(product);
+        dao.addProduct(product);
 
     }
 }

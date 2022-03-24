@@ -14,7 +14,7 @@ public class Account {
     private String name;
     private String password ;
   
-    private int phone;
+    private String phone;
     private String address;
     private String displayname;
     
@@ -23,7 +23,7 @@ public class Account {
     public Account() {
     }
 
-    public Account(int id, String name, String password,  int phone, String address, String displayname) {
+    public Account(int id, String name, String password,  String phone, String address, String displayname) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -32,7 +32,7 @@ public class Account {
         this.address = address;
         this.displayname = displayname;
     }
- public Account( String name, String password, int phone, String address, String displayname) {
+ public Account( String name, String password, String phone, String address, String displayname) {
      
         this.name = name;
         this.password = password;
@@ -66,11 +66,11 @@ public class Account {
     }
 
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

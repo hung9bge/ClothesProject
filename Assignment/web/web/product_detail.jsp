@@ -32,7 +32,7 @@
                         <ul>
                             <li><a href="product">Trang Chủ</a></li>
                            <c:forEach items="${categoriesList}" var="o">
-                                <li><a href="product?action=getProductByCate&id=${o.id}">${o.name}</a></li>   
+                                <li><a href="product?action=getProductByCate&id=${o.cate_id}">${o.name}</a></li>   
                             </c:forEach>
                             <li><a href="login">Tài Khoản</a></li>
 

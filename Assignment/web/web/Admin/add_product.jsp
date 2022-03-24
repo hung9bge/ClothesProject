@@ -112,30 +112,32 @@
             <aside class="right-side">
 
 
-
-                <h1>EDIT ACCOUNT</h1>
                 <style>
-                    div.form-add{
-                 
+                    div.form-add{                   
+                      
                     }
                 </style>
                 <div class="form-add" >
-                    <form action="SettingAccount?action=editAccountPost&id=${accountDetail.id}" method="post">
-                        Name: <input type="text" name="name" value="${accountDetail.name}"/>
+                    <h1>CODE HERE</h1>
+                    <form action="SettingProductController?action=addPost" method="post">
+                        Name  : <input type="text" name="name"/>
                         <br> <br>
-                        Password: <input type="text" name="password" value="${accountDetail.password}"/>
+                        Price&ensp;: <input type="text" name="price" />
                         <br> <br>
-                        Phone <input type="text" name="phone" value="${accountDetail.phone}"/>
+                        Image : <input type="text" name="image" />
                         <br> <br>
-                        Address: <input type="text" name="address" value="${accountDetail.address}"/>
-                        <br> <br>
-                        Display Name: <input type="text" name="displayname" value="${accountDetail.displayname}"/>
-                      
+
+                        Status: 
+
+                        <select name="status"> 
+                            <option>show</option>       
+                            <option>hide</option>       
+
+                        </select>
                         <br> <br>
                         <button type="submit">Save</button>
                     </form>
                 </div>
-
             </aside><!-- /.right-side -->
 
         </div><!-- ./wrapper -->

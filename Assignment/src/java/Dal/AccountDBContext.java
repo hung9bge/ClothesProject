@@ -40,7 +40,7 @@ public class AccountDBContext extends DBContext {
         } catch (SQLException ex) {
             Logger.getLogger(AccountDBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return account;
     }
       public Account getAccountById(int id) {
         Account account = new Account();
@@ -54,7 +54,7 @@ public class AccountDBContext extends DBContext {
                   rs.getInt("id"),
                         rs.getString("name"),
                         rs.getString("password"),
-                        rs.getInt("phone_number"),
+                        rs.getString("phone_number"),
                         rs.getString("address"),
                         rs.getString("display_name"));
 
@@ -78,7 +78,7 @@ public class AccountDBContext extends DBContext {
                         rs.getInt("id"),
                         rs.getString("name"),
                         rs.getString("password"),
-                        rs.getInt("phone_number"),
+                        rs.getString("phone_number"),
                         rs.getString("address"),
                         rs.getString("display_name")));
 
@@ -90,32 +90,32 @@ public class AccountDBContext extends DBContext {
 
     }
 
-    public void editAccount(Account Account) {
+    public void editAccount(Account account) {
         String sql = this.query.editAccount;
 
         try {
             PreparedStatement stm = connection.prepareStatement(sql);
-            stm.setString(1, Account.getName());
-            stm.setString(2, Account.getPassword());
-            stm.setInt(3, Account.getPhone());
-            stm.setString(4, Account.getAddress());
-            stm.setString(5, Account.getDisplayname());
-            stm.setInt(6, Account.getId());
+            stm.setString(1, account.getName());
+            stm.setString(2, account.getPassword());
+            stm.setString(3, account.getPhone());
+            stm.setString(4, account.getAddress());
+            stm.setString(5, account.getDisplayname());
+            stm.setInt(6, account.getId());
             stm.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(AccountDBContext.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    public void addGet(Account Account) {
+    public void addGet(Account account) {
         String sql = this.query.addAccount;
         try {
             PreparedStatement stm = connection.prepareStatement(sql);
-            stm.setString(1, Account.getName());
-            stm.setString(2, Account.getPassword());
-            stm.setInt(3, Account.getPhone());
-            stm.setString(4, Account.getAddress());
-            stm.setString(5, Account.getDisplayname());
+            stm.setString(1, account.getName());
+            stm.setString(2, account.getPassword());
+            stm.setString(3, account.getPhone());
+            stm.setString(4, account.getAddress());
+            stm.setString(5, account.getDisplayname());
 
             stm.executeUpdate();
         } catch (SQLException ex) {
@@ -139,7 +139,8 @@ public class AccountDBContext extends DBContext {
 
     public static void main(String[] args) {
         AccountDBContext dao = new AccountDBContext();
-        Account a = dao.getAccount("hung", "123");
-        System.out.println(a);
+      Account account= new Account("hung2662001", "1424234", "0977026555", "yendong ý yên", "hung2660021");
+      
+       dao.addGet(account);
     }
 }

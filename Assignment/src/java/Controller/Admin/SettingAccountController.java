@@ -43,6 +43,7 @@ public class SettingAccountController extends HttpServlet {
                     break;
                 case "deletePost":
                     deletePost(request, response);
+                     break;
             
             
         }
@@ -58,6 +59,7 @@ public class SettingAccountController extends HttpServlet {
                 break;
             case "addAccountPost":
                 addAccountPost(request, response);
+                break;
         }
     }
 
@@ -89,7 +91,7 @@ public class SettingAccountController extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        int phone = Integer.parseInt(request.getParameter("phone")); 
+        String phone = request.getParameter("phone"); 
         String address = request.getParameter("address");
         String displayname = request.getParameter("displayname");
         Account account = new Account(id, name, password, phone, address, displayname);
@@ -101,12 +103,14 @@ public class SettingAccountController extends HttpServlet {
             throws ServletException, IOException {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        int phone = Integer.parseInt(request.getParameter("phone")); 
+        String phone = request.getParameter("phone"); 
         String address = request.getParameter("address");
         String displayname = request.getParameter("displayname");
       Account account = new Account(name, password, phone, address, displayname);
         accountDBContext.addGet(account);
-        response.sendRedirect("SettingAccount");
+        
+//        response.getWriter().println(account);
+       response.sendRedirect("SettingAccount");
         
     }
     private void deletePost(HttpServletRequest request, HttpServletResponse response)

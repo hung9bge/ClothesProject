@@ -66,10 +66,10 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/26115.jpg" class="img-circle" alt="User Image" />
+                            <img src="web/Admin/img/26115.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                            <p>Hello, Admin</p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -92,13 +92,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="general.html">
+                            <a href="SettingAccount">
                                 <i class="fa fa-gavel"></i> <span>Account</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="basic_form.html">
+                            <a href="SettingCategoryController">
                                 <i class="fa fa-globe"></i> <span>Category</span>
                             </a>
                         </li>
@@ -112,25 +112,19 @@
             <aside class="right-side">
 
 
-
-                <h1>CODE HERE</h1>
                 <style>
-                    div.form-add{
-                        text-align: center;
+                    div.form-add{                   
+                      
                     }
                 </style>
                 <div class="form-add" >
-                    <form action="SettingProductController?action=editPost&id=${productDetail.id}" method="post">
-                        Name: <input type="text" name="name" value="${productDetail.name}"/>
-                        <br> <br>
-                        Price: <input type="text" name="price" value="${productDetail.price}"/>
-                        <br> <br>
-                        Image: <input type="text" name="image" value="${productDetail.img}"/>
-                        <br> <br>
-                        <img src="web/images/quan_ao/${productDetail.img}" width="50%">
-                        <br> <br>
+                    <h1>CODE HERE</h1>
+                    <form action="SettingCategoryController?action=addPost" method="post">
+                        Name  : <input type="text" name="name"/>
+                        <br><br>
                         Status: 
-                        <select name="status"value="${productDetail.status}"> 
+
+                        <select name="status"> 
                             <option>show</option>       
                             <option>hide</option>       
 
@@ -139,7 +133,6 @@
                         <button type="submit">Save</button>
                     </form>
                 </div>
-
             </aside><!-- /.right-side -->
 
         </div><!-- ./wrapper -->

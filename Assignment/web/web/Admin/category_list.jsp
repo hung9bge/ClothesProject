@@ -70,7 +70,7 @@
                         </div>
                         <div class="pull-left info">
                             <p>Hello, Admin</p>
-
+ 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
                     </div>
@@ -83,6 +83,7 @@
                             </span>
                         </div>
                     </form>
+                    
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
@@ -103,7 +104,7 @@
                             </a>
                         </li>
 
-
+                       
 
                     </ul>
                 </section>
@@ -112,29 +113,48 @@
             <aside class="right-side">
 
 
-
-                <h1>EDIT ACCOUNT</h1>
+<h1>Catagory HOME</h1>
+                
+                <h3><a href="SettingCategoryController?action=addGet">Add New Category</a></h3>
                 <style>
                     div.form-add{
-                 
+                        
+                        padding-left: 20%;
+                   
+                        
+                    
+                    }
+                    table.center { width: 780px; margin-left: auto; margin-right: auto; 
                     }
                 </style>
                 <div class="form-add" >
-                    <form action="SettingAccount?action=editAccountPost&id=${accountDetail.id}" method="post">
-                        Name: <input type="text" name="name" value="${accountDetail.name}"/>
-                        <br> <br>
-                        Password: <input type="text" name="password" value="${accountDetail.password}"/>
-                        <br> <br>
-                        Phone <input type="text" name="phone" value="${accountDetail.phone}"/>
-                        <br> <br>
-                        Address: <input type="text" name="address" value="${accountDetail.address}"/>
-                        <br> <br>
-                        Display Name: <input type="text" name="displayname" value="${accountDetail.displayname}"/>
-                      
-                        <br> <br>
-                        <button type="submit">Save</button>
-                    </form>
-                </div>
+                
+                <table  border="1">
+                    <tr>
+                        <th>Name</th> 
+                        <th>Status</th>
+                    </tr>
+                    <c:forEach items="${categoryAll}" var="o" >
+                        <tr>
+                            <td>${o.name}</td> 
+                            <td>${o.status}</td> 
+                            
+                            <c:choose>
+                                <c:when test="${o.status=='hide'}">
+                                    <td><a href="SettingCategoryController?action=changeStatus&id=${o.cate_id}">show</a></td>
+                                </c:when>    
+                                <c:otherwise>
+                                    <td><a href="SettingCategoryController?action=changeStatus&id=${o.cate_id}">hide</a></td>
+                                </c:otherwise>
+                            </c:choose>
+                                    <td><a href="SettingCategoryController?action=editGet&id=${o.cate_id}">Edit</a></td>
+                                    <td><a href="SettingCategoryController?action=deletePost&id=${o.cate_id}">Delete</a></td>
+                        </tr>
+                    </c:forEach>
+
+                </table>
+
+</div>
 
             </aside><!-- /.right-side -->
 

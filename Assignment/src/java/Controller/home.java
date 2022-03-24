@@ -5,8 +5,11 @@
  */
 package Controller;
 
+import Dal.CategoryDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import Model.Category;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -56,7 +59,10 @@ public class home extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        CategoryDBContext categoryDBContext = new CategoryDBContext();
+        List<Category> categoriesList = categoryDBContext.getAllCategories();
+        request.setAttribute("categoriesList", categoriesList);
+        request.getRequestDispatcher("web/home.jsp").forward(request, response);
     }
 
     /**

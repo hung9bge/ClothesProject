@@ -113,24 +113,28 @@
 
 
 
-                <h1>EDIT ACCOUNT</h1>
+              
                 <style>
                     div.form-add{
-                 
+                       
                     }
                 </style>
                 <div class="form-add" >
-                    <form action="SettingAccount?action=editAccountPost&id=${accountDetail.id}" method="post">
-                        Name: <input type="text" name="name" value="${accountDetail.name}"/>
+                    <form action="SettingProductController?action=editPost&id=${productDetail.id}" method="post">
+                        Name: <input type="text" name="name" value="${productDetail.name}"/>
                         <br> <br>
-                        Password: <input type="text" name="password" value="${accountDetail.password}"/>
+                        Price: <input type="text" name="price" value="${productDetail.price}"/>
                         <br> <br>
-                        Phone <input type="text" name="phone" value="${accountDetail.phone}"/>
+                        Image: <input type="text" name="image" value="${productDetail.img}"/>
                         <br> <br>
-                        Address: <input type="text" name="address" value="${accountDetail.address}"/>
+                        <img src="web/images/quan_ao/${productDetail.img}" width="50%">
                         <br> <br>
-                        Display Name: <input type="text" name="displayname" value="${accountDetail.displayname}"/>
-                      
+                        Status: 
+                        <select name="status"value="${productDetail.status}"> 
+                            <option>show</option>       
+                            <option>hide</option>       
+
+                        </select>
                         <br> <br>
                         <button type="submit">Save</button>
                     </form>

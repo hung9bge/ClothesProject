@@ -66,10 +66,10 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src="img/26115.jpg" class="img-circle" alt="User Image" />
+                            <img src="web/Admin/img/26115.jpg" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Jane</p>
+                            <p>Hello, Admin</p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -98,7 +98,7 @@
                         </li>
 
                         <li>
-                            <a href="basic_form.html">
+                            <a href="SettingCategoryController">
                                 <i class="fa fa-globe"></i> <span>Category</span>
                             </a>
                         </li>
@@ -113,13 +113,13 @@
 
 
 
-                <h1>CODE HERE</h1>
-                <h3><a href="SettingAccountController?action=addGet">Add New Account</a></h3>
+                <h1>ACCOUNT HOME</h1>
+                <h3><a href="SettingAccount?action=addGet">Add New Account</a></h3>
                 <style>
                     div.form-add{
                         
                         padding-left: 20%;
-                        text-align: center;
+                   
                         
                     
                     }
