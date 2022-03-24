@@ -103,7 +103,7 @@
                             </a>
                         </li>
 
-                       
+
 
                     </ul>
                 </section>
@@ -114,38 +114,31 @@
 
 
                 <h1>CODE HERE</h1>
-                <h3><a href="SettingProductController?action=addGet">Add New Product</a></h3>
-                <table border="1">
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Image</th>  
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                    <c:forEach items="${productAll}" var="o" >
-                        <tr>
-                            <td>${o.name}</td>
-                            <td>${o.price}</td>
-                            <td>${o.img}</td>  
-                            <td>${o.status}</td> 
-                            
-                            <c:choose>
-                                <c:when test="${o.status=='hide'}">
-                                    <td><a href="SettingProductController?action=changeStatus&id=${o.id}">show</a></td>
-                                </c:when>    
-                                <c:otherwise>
-                                    <td><a href="SettingProductController?action=changeStatus&id=${o.id}">hide</a></td>
-                                </c:otherwise>
-                            </c:choose>
-                                    <td><a href="SettingProductController?action=editGet&id=${o.id}">Edit</a></td>
-                                    <td><a href="SettingProductController?action=deletePost&id=${o.id}">Delete</a></td>
-                        </tr>
-                    </c:forEach>
+                <style>
+                    div.form-add{
+                        text-align: center;
+                    }
+                </style>
+                <div class="form-add" >
+                    <form action="SettingProductController?action=editPost&id=${productDetail.id}" method="post">
+                        Name: <input type="text" name="name" value="${productDetail.name}"/>
+                        <br> <br>
+                        Price: <input type="text" name="price" value="${productDetail.price}"/>
+                        <br> <br>
+                        Image: <input type="text" name="image" value="${productDetail.img}"/>
+                        <br> <br>
+                        <img src="web/images/quan_ao/${productDetail.img}" width="50%">
+                        <br> <br>
+                        Status: 
+                        <select name="status"value="${productDetail.status}"> 
+                            <option>show</option>       
+                            <option>hide</option>       
 
-                </table>
-
-
+                        </select>
+                        <br> <br>
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
 
             </aside><!-- /.right-side -->
 

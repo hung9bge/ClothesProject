@@ -16,12 +16,17 @@ public class Query {
     String getProductAll = "select * from product";
     String hideStatus = "UPDATE [product] SET [status] = 'hide' WHERE id = ?";
     String showStatus = "UPDATE [product] SET [status] = 'show' WHERE id = ?";
-    String edit = "UPDATE [product] SET [name] = ?,[price] = ?,[img] = ?,[category_id] = ? WHERE [id] = ?";
+    String edit = "UPDATE [product] SET [name] = ?,[price] = ?,[img] = ?,[status] = ? WHERE [id] = ?";
+    String add = "INSERT INTO [dbo].[product]([name],[price],[img],[status])\n" +
+                 "VALUES(?,?,?,?)";
+    String delete = "DELETE FROM [dbo].[product]WHERE id = ?";
     //==============Category==================
     String getAllCategories = "select * from category";
     String getCategoryById = "  select * from category where id = ?";
-    
-    
-  
-   
+     //==============Account==================
+    String getAccountAll = "select * from account";
+    String editAccount = "UPDATE [dbo].[account]SET [name] = ?,[password] = ?,[phone_number] = ?,[address] = ?,[display_name] = ? WHERE id = ?";
+    String addAccount ="INSERT INTO [dbo].[account]([id],[name],[password],[phone_number],[address],[display_name])VALUES(?,?,?,?,?)";
+    String deleteAccount = "DELETE FROM [dbo].[account]WHERE id = ?";
+    String getAccountById = "select * from account where id = ? ";
 }

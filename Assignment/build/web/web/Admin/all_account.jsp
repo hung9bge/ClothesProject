@@ -92,7 +92,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="general.html">
+                            <a href="SettingAccount">
                                 <i class="fa fa-gavel"></i> <span>Account</span>
                             </a>
                         </li>
@@ -103,7 +103,7 @@
                             </a>
                         </li>
 
-
+                       
 
                     </ul>
                 </section>
@@ -114,31 +114,45 @@
 
 
                 <h1>CODE HERE</h1>
+                <h3><a href="SettingAccountController?action=addGet">Add New Account</a></h3>
                 <style>
                     div.form-add{
+                        
+                        padding-left: 20%;
                         text-align: center;
+                        
+                    
+                    }
+                    table.center { width: 780px; margin-left: auto; margin-right: auto; 
                     }
                 </style>
                 <div class="form-add" >
-                    <form action="SettingProductController?action=editPost&id=${productDetail.id}" method="post">
-                        Name: <input type="text" name="name" value="${productDetail.name}"/>
-                        <br> <br>
-                        Price: <input type="text" name="price" value="${productDetail.price}"/>
-                        <br> <br>
-                        Image: <input type="text" name="image" value="${productDetail.img}"/>
-                        <br> <br>
-                        <img src="web/images/quan_ao/${productDetail.img}" width="50%">
-                        <br> <br>
-                        Status: 
-                        <select name="status"value="${productDetail.status}"> 
-                            <option>show</option>       
-                            <option>hide</option>       
+                
+                <table  border="1">
+                    <tr>
+                        <th>Name</th>
+                        <th>Password</th>
+                        <th>Phone</th>  
+                        <th>Address</th>  
+                        <th>Display_name</th>  
+                        <th></th>  
+                      
+                    </tr>
+                    <c:forEach items="${accountAll}" var="o" >
+                        <tr>
+                            <td>${o.name}</td>
+                            <td>${o.password}</td>
+                            <td>${o.phone}</td>  
+                            <td>${o.address}</td> 
+                             <td>${o.displayname}</td> 
+                            <td><a href="SettingAccount?action=editGet&id=${o.id}">Edit</a></td>
+                             <td><a href="SettingAccount?action=deletePost&id=${o.id}">Delete</a></td>
+                        </tr>
+                    </c:forEach>
 
-                        </select>
-                        <br> <br>
-                        <button type="submit">Save</button>
-                    </form>
-                </div>
+                </table>
+
+</div>
 
             </aside><!-- /.right-side -->
 

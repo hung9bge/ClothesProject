@@ -120,21 +120,17 @@
                     }
                 </style>
                 <div class="form-add" >
-                    <form action="SettingProductController?action=editPost&id=${productDetail.id}" method="post">
-                        Name: <input type="text" name="name" value="${productDetail.name}"/>
+                    <form action="SettingAccount?action=editAccountPost&id=${accountDetail.id}" method="post">
+                        Name: <input type="text" name="name" value="${accountDetail.name}"/>
                         <br> <br>
-                        Price: <input type="text" name="price" value="${productDetail.price}"/>
+                        Password: <input type="text" name="password" value="${accountDetail.password}"/>
                         <br> <br>
-                        Image: <input type="text" name="image" value="${productDetail.img}"/>
+                        Phone <input type="text" name="phone" value="${accountDetail.phone}"/>
                         <br> <br>
-                        <img src="web/images/quan_ao/${productDetail.img}" width="50%">
+                        Address: <input type="text" name="address" value="${accountDetail.address}"/>
                         <br> <br>
-                        Status: 
-                        <select name="status"value="${productDetail.status}"> 
-                            <option>show</option>       
-                            <option>hide</option>       
-
-                        </select>
+                        Display Name: <input type="text" name="displayname" value="${accountDetail.displayname}"/>
+                      
                         <br> <br>
                         <button type="submit">Save</button>
                     </form>

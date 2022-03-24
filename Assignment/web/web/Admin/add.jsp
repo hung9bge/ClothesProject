@@ -112,25 +112,24 @@
             <aside class="right-side">
 
 
-
-                <h1>CODE HERE</h1>
                 <style>
-                    div.form-add{
-                        text-align: center;
+                    div.form-add{                   
+                        text-align: center;     
                     }
                 </style>
                 <div class="form-add" >
-                    <form action="SettingProductController?action=editPost&id=${productDetail.id}" method="post">
-                        Name: <input type="text" name="name" value="${productDetail.name}"/>
+                    <h1>CODE HERE</h1>
+                    <form action="SettingProductController?action=addPost" method="post">
+                        Name  : <input type="text" name="name"/>
                         <br> <br>
-                        Price: <input type="text" name="price" value="${productDetail.price}"/>
+                        Price&ensp;: <input type="text" name="price" />
                         <br> <br>
-                        Image: <input type="text" name="image" value="${productDetail.img}"/>
+                        Image : <input type="text" name="image" />
                         <br> <br>
-                        <img src="web/images/quan_ao/${productDetail.img}" width="50%">
-                        <br> <br>
+
                         Status: 
-                        <select name="status"value="${productDetail.status}"> 
+
+                        <select name="status"> 
                             <option>show</option>       
                             <option>hide</option>       
 
@@ -139,7 +138,6 @@
                         <button type="submit">Save</button>
                     </form>
                 </div>
-
             </aside><!-- /.right-side -->
 
         </div><!-- ./wrapper -->

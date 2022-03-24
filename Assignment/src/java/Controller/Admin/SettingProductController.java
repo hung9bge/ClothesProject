@@ -23,67 +23,107 @@ import org.jboss.classfilewriter.annotations.IntAnnotationValue;
  */
 public class SettingProductController extends HttpServlet {
 
-    ProductDBContext productDBContext= new ProductDBContext();
-    
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-      
-    }
+    ProductDBContext productDBContext = new ProductDBContext();
 
-  
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getParameter("action");
-        if(action == null || action.length() == 0 || action == ""){
+        if (action == null || action.length() == 0 || action == "") {
             listDefault(request, response);
-        }else{
-            switch(action){
+        } else {
+            switch (action) {
                 case "changeStatus":
                     changeStatus(request, response);
                     break;
                 case "editGet":
                     editGet(request, response);
                     break;
+                case "addGet":
+                    addGet(request, response);
+                    break;
+                case "deletePost":
+                    deletePost(request, response);
             }
-            
+
         }
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String action = request.getParameter("action");
+        switch (action) {
+            case "editPost":
+                editPost(request, response);
+                break;
+            case "addPost":
+                addPost(request, response);
+        }
     }
-    
-    
-    
-   //=========================METHOD GET========================================
+
+    //=========================METHOD GET========================================
     private void listDefault(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ArrayList<Product> productAll = productDBContext.getProductAll();
         request.setAttribute("productAll", productAll);
         request.getRequestDispatcher("web/Admin/index.jsp").forward(request, response);
     }
+
     private void changeStatus(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+            throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = productDBContext.getProductById(id);
         productDBContext.ChangeStatus(product);
-        response.sendRedirect("SettingProductController");     
+        response.sendRedirect("SettingProductController");
     }
-    private void editGet (HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException{
+   
+
+    private void editGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-         Product product = productDBContext.getProductById(id);
+        Product product = productDBContext.getProductById(id);
+        request.setAttribute("productDetail", product);
+        request.getRequestDispatcher("web/Admin/edit.jsp").forward(request, response);
+    }
+   private  void addGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+ 
+ request.getRequestDispatcher("web/Admin/add.jsp").forward(request, response);   
+    }
+    //=========================METHOD POST======================================
+    private void editPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        double price = Double.parseDouble(request.getParameter("price"));
-        String img = request.getParameter("img");
-        int cate_id = Integer.parseInt(request.getParameter("cate_id"));
-        String cate_name = request.getParameter("cate_name");      
-           
-        productDBContext.editProduct(product);
+        Double price = Double.parseDouble(request.getParameter("price"));
+        String img = request.getParameter("image");
+        String status = request.getParameter("status");
+        Product newProduct = new Product(id, name, price, img, status);
+        productDBContext.editProduct(newProduct);
+        response.sendRedirect("SettingProductController");
+    }
+ 
+    private void addPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+       
+        String name = request.getParameter("name");
+        Double price = Double.parseDouble(request.getParameter("price"));
+        String img = request.getParameter("image");
+        String status = request.getParameter("status");
+        Product newProduct = new Product( name, price, img, status);
+        productDBContext.addGet(newProduct);
         response.sendRedirect("SettingProductController");
         
     }
+    private void deletePost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+         int id = Integer.parseInt(request.getParameter("id"));
+          Product product = productDBContext.getProductById(id);
+        productDBContext.delete(product.getId());
+        response.sendRedirect("SettingProductController");
+    
+        
+    }
+    
     @Override
     public String getServletInfo() {
         return "Short description";

@@ -42,7 +42,14 @@ public class Product extends Category{
         this.img = img;
         this.status = status;
     }
-    
+ public Product(String name, Double price, String img, String status) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.img = img;
+        this.status = status;
+    }
+   
     
 
     public int getId() {

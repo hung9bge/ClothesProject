@@ -92,7 +92,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="general.html">
+                            <a href="SettingAccount">
                                 <i class="fa fa-gavel"></i> <span>Account</span>
                             </a>
                         </li>
@@ -114,8 +114,21 @@
 
 
                 <h1>CODE HERE</h1>
-                <h3><a href="SettingProductController?action=addGet">Add New Product</a></h3>
-                <table border="1">
+                <h3><a href="SettingProductController?action=addGet">Add New Product:</a></h3>
+                <style>
+                    div.form-add{
+                        
+                        padding-left: 20%;
+                        text-align: center;
+                        
+                    
+                    }
+                    table.center { width: 780px; margin-left: auto; margin-right: auto; 
+                    }
+                </style>
+                <div class="form-add" >
+                
+                <table  border="1">
                     <tr>
                         <th>Name</th>
                         <th>Price</th>
@@ -145,7 +158,7 @@
 
                 </table>
 
-
+</div>
 
             </aside><!-- /.right-side -->
 
